@@ -1,5 +1,6 @@
 """
 Problem: Group Anagrams
+Difficulty: Medium
 Pattern: Hash Map / Sorting
 
 Time: O(n * k log k)
