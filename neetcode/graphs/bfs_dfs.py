@@ -9,6 +9,19 @@ class Node:
 
 
 def bfs(root: Node | None) -> list[str]:
+    """
+    Breadth-first search / level-order traversal of a binary tree.
+
+    Time: O(n)
+    Space: O(n)
+
+    n = number of nodes in the tree
+
+    Idea:
+    Use a queue (FIFO). Start with the root. Repeatedly remove the oldest
+    discovered node, add its value to the result, then append its left and
+    right children if they exist.
+    """
     if root is None:
         return []
 
@@ -29,6 +42,19 @@ def bfs(root: Node | None) -> list[str]:
 
 
 def dfs(root: Node | None) -> list[str]:
+    """
+    Depth-first search / preorder traversal of a binary tree.
+
+    Time: O(n)
+    Space: O(n)
+
+    n = number of nodes in the tree
+
+    Idea:
+    Use a stack (LIFO). Start with the root. Repeatedly remove the most
+    recently discovered node, add its value to the result, then push right
+    before left so the left child is processed first.
+    """
     if root is None:
         return []
 
