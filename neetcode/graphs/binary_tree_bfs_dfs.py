@@ -4,8 +4,8 @@ from collections import deque
 class Node:
     def __init__(self, val: str):
         self.val = val
-        self.left = None
-        self.right = None
+        self.left: Node | None = None
+        self.right: Node | None = None
 
 
 def bfs(root: Node | None) -> list[str]:

@@ -1,8 +1,8 @@
 class Node:
     def __init__(self, value: str):
         self.value = value
-        self.left = None
-        self.right = None
+        self.left: Node | None = None
+        self.right: Node | None = None
 
 
 def preorder(root: Node | None) -> list[str]:
