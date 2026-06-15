@@ -30,10 +30,7 @@ class HeartbeatTracker:
         self.timeout = timeout
 
     def record_heartbeat(self, server: str, timestamp: int) -> None:
-        if server not in self.servers:
-            self.servers[server] = timestamp
-        else:
-            self.servers[server] = max(self.servers[server], timestamp)
+        self.servers[server] = max(self.servers.get(server, timestamp), timestamp)
 
     def is_alive(self, server: str, current_time: int) -> bool:
         if server not in self.servers:
@@ -88,7 +85,8 @@ def main():
         actual = ht.get_dead_servers(current_time)
         print(
             f"dead servers at {current_time}: "
-            f"{actual} | expected: {expected}"
+            f"{actual} | expected: {expected} | "
+            f"Correct: {actual == expected}"
         )
 
 
