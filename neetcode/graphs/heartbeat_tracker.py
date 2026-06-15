@@ -1,4 +1,30 @@
 class HeartbeatTracker:
+    """
+    Track server liveness using heartbeat timestamps.
+
+    Each server is mapped to its most recent heartbeat timestamp. A server is
+    considered alive when its latest heartbeat is within the timeout window:
+        0 <= current_time - last_seen <= timeout
+
+    If a heartbeat arrives out of order, keep the newest timestamp only.
+    A server with a heartbeat timestamp in the future relative to current_time
+    is treated as not alive.
+
+    record_heartbeat:
+        Time: O(1)
+        Space: O(1) additional space per call
+
+    is_alive:
+        Time: O(1)
+        Space: O(1)
+
+    get_dead_servers:
+        Time: O(n)
+        Space: O(d)
+
+    n = number of tracked servers
+    d = number of dead servers returned
+    """
     def __init__(self, timeout: int):
         self.servers: dict[str, int] = {}
         self.timeout = timeout
