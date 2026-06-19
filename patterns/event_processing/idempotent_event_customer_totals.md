@@ -1,4 +1,5 @@
 # Idempotent Event Processing / Customer Totals
+(Idempotent event processing means retries do not change the final result. We achieve that by remembering processed event IDs and ignoring duplicates.)
 
 ## Prompt
 
