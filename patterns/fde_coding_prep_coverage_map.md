@@ -10,9 +10,9 @@
 | 6 | ✅ | Rate limiter / hit counter | Allow/deny requests per user within a time window | Covered earlier |
 | 7 | ✅ | Dependency graph / cycle detection | Detect whether service/package dependencies contain a cycle | Covered |
 | 8 | ✅ | Topological ordering | Return safe deployment/build order from dependency graph | Covered |
-| 9 | 🟡 | Reverse dependency / impact analysis | Given dependency graph, find downstream services impacted by a change | Partly covered |
+| 9 | ✅ | Reverse dependency / impact analysis | Given dependency graph, find downstream services impacted by a change | Covered |
 | 10 | ✅ | Feature flag evaluator / OOP rules engine | Add flags and evaluate user/group targeting rules | Covered |
-| 11 | ⬜ | Missing sequence / gap detection | Given IDs/timestamps, find missing ranges or gaps | Not yet / light only |
+| 11 | ✅ | Missing sequence / gap detection | Given IDs/timestamps, find missing ranges or gaps | Covered |
 | 12 | ✅ | Trie / prefix index | Store/search strings, autocomplete, prefix lookup | Covered earlier, worth review |
 | 13 | ✅ | Messy CSV / JSON normalization | Parse records, clean malformed/missing fields, aggregate output | Covered |
 | 14 | ✅ | Retry / exponential backoff wrapper | Retry failing operations, record exponential backoff delays, re-raise last exception | Covered |
@@ -22,9 +22,9 @@
 ## Summary
 
 ```text
-Solidly covered: 12
-Partly covered: 2
-Not yet / light only: 2
+Solidly covered: 14
+Partly covered: 1
+Not yet / light only: 1
 ```
 
 ## Highest-value remaining topics
