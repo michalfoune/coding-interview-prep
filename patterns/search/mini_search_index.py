@@ -23,9 +23,9 @@ class MiniSearchIndex:
     """
 
     def __init__(self):
-        self.documents: dict[str, str] = {}
-        self.doc_tokens: dict[str, Counter[str]] = {}
-        self.index: dict[str, set[str]] = defaultdict(set)
+        self.documents: dict[str, str] = {} # book_name -> raw_body_text
+        self.doc_tokens: dict[str, Counter[str]] = {} # book_name -> freqency of keywords
+        self.index: dict[str, set[str]] = defaultdict(set) # keyword -> set of book names
 
     def _tokenize(self, text: str) -> list[str]:
         """

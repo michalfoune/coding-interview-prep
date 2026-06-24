@@ -16,8 +16,8 @@
 | 12 | ✅ | Trie / prefix index | Store/search strings, autocomplete, prefix lookup | Covered earlier, worth review |
 | 13 | ✅ | Messy CSV / JSON normalization | Parse records, clean malformed/missing fields, aggregate output | Covered |
 | 14 | ✅ | Retry / exponential backoff wrapper | Retry failing operations, record exponential backoff delays, re-raise last exception | Covered |
-| 15 | 🟡 | Top-K / ranking / heap | Return top services/users/items by score/count | Light only |
-| 16 | ⬜ | Mini search / RAG-like retrieval index | Store docs/chunks and return best matches by keyword/vector-like score | Not yet |
+| 15 | ✅ | Top-K / ranking / heap | Return top services/users/items by score/count | Covered |
+| 16 | ⬜ | Mini search / RAG-like retrieval index | Store docs/chunks and return best matches by keyword/vector-like score | Lightly covered |
 
 ## Summary
 
