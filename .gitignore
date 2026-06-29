@@ -29,7 +29,12 @@ private/
 *red_zone*.md
 *misses*.md
 *scratch*.md
+*internal*
 
 # Local generated files
 *.log
 *.tmp
+
+# DS Store
+.DS_Store
+**/.DS_Store
