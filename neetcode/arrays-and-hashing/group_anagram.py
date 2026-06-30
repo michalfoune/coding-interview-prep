@@ -13,6 +13,17 @@ k = maximum length of a word
 Idea:
 Sort each word to create a canonical key.
 Words with the same canonical key are anagrams and belong in the same group.
+
+groups = {
+    "aet": ["tea", "eat"],
+    "bus": ["bus", "sub"],
+}
+
+Output:
+[
+    ["tea", "eat"],
+    ["bus", "sub"],
+]
 """
 
 from typing import List

@@ -18,6 +18,22 @@ Idea:
 Use a fixed-size list of buckets. Hash each key to a bucket index using
 key % num_buckets. Each bucket stores keys that collide at the same index.
 For add, remove, and contains, only search within the relevant bucket.
+
+Buckets
+buckets = [
+    [key, key, key],
+    [],
+    [key, key],
+    ...
+]
+
+buckets = [
+    [1000, 2000],  # bucket 0
+    [1, 1001],     # bucket 1
+    [],            # bucket 2
+    [3],           # bucket 3
+    ...
+]
 """
 
 class MyHashSet:

@@ -18,6 +18,23 @@ Idea:
 Use a fixed-size array of buckets.
 Each bucket stores key-value pairs that hash to the same index.
 On put/get/remove, hash the key to find the bucket, then scan that bucket.
+
+Buckets
+Shape:
+self.buckets = [
+    [[key, value], [key, value]],   # bucket 0
+    [],                            # bucket 1
+    [[key, value]],                # bucket 2
+    ...
+]
+
+Example:
+self.buckets = [
+    [[1000, 7], [2000, 9]],  # both hash to bucket 0 if num_buckets = 1000
+    [[1, 42]],               # bucket 1
+    [],                      # bucket 2
+    [[3, 99]],               # bucket 3
+]
 """
 
 class MyHashMap:

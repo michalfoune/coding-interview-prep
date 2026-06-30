@@ -16,8 +16,6 @@ return True. Otherwise, add it to the set and continue.
 
 from typing import List
 
-from typing import List
-
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
         seen = set()
