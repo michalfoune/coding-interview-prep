@@ -54,6 +54,31 @@ def find_first_unhealthy_version(n: int, is_healthy) -> int:
     return first
 
 
+def find_first_unhealthy_version_v2(n: int, is_healthy) -> int:
+    if n <= 0:
+        return -1
+
+    left = 1
+    right = n
+
+    while left < right:
+        mid = (left + right) // 2
+
+        if is_healthy(mid):
+            # mid is healthy, so first unhealthy must be after mid
+            left = mid + 1
+        else:
+            # mid is unhealthy, so mid could be the first unhealthy
+            # keep it as a candidate
+            right = mid
+
+    # left == right here
+    if is_healthy(left):
+        return -1
+
+    return left
+
+
 def main():
     is_healthy_v1 = make_is_healthy([True, True, False, False])
     is_healthy_v2 = make_is_healthy([True, True, True, True, False, False])

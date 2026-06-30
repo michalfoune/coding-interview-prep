@@ -51,9 +51,9 @@ class Solution:
         sorted_left = self.merge_sort(nums[:mid])
         sorted_right = self.merge_sort(nums[mid:])
 
-        return self.merge(sorted_left, sorted_right)
+        return self._merge(sorted_left, sorted_right)
 
-    def merge(self, left: List[int], right: List[int]) -> List[int]:
+    def _merge(self, left: List[int], right: List[int]) -> List[int]:
         i = 0
         j = 0
         result = []

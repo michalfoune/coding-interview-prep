@@ -19,7 +19,7 @@ Combine the sorted left group, equal group, and sorted right group.
 from typing import List
 
 class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
+    def quick_sort(self, nums: List[int]) -> List[int]:
         if len(nums) <= 1:
             return nums
         
@@ -29,4 +29,4 @@ class Solution:
         middle = [x for x in nums if x == pivot]
         right = [x for x in nums if x > pivot]
 
-        return self.sortArray(left) + middle + self.sortArray(right)
+        return self.quick_sort(left) + middle + self.quick_sort(right)

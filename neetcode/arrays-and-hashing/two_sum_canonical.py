@@ -18,7 +18,7 @@ If the complement already exists in the map, return both indices.
 from typing import List
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def two_sum(self, nums: List[int], target: int) -> List[int]:
         seen = {}
 
         for i, num in enumerate(nums):
